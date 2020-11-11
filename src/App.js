@@ -10,6 +10,10 @@ function App() {
   const [tour, setTour] = useState([]);
   const [loading, setLoading] = useState(true);
 
+  const deleteTour = (id) => {
+    const newTour = tour.filter((tour) => tour.id !== id);
+    setTour(newTour);
+  };
   const fetchTour = () => {
     setLoading(true);
     try {
@@ -34,7 +38,7 @@ function App() {
   return (
     <main className="App">
       <h1>Nos Sejours</h1>
-      <Tours tour={tour} />
+      <Tours tour={tour} deleteTour={deleteTour} />
     </main>
   );
 }

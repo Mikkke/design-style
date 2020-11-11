@@ -1,11 +1,11 @@
 import React from "react";
 import Tour from "./Tour";
 
-const Tours = ({ tour }) => {
+const Tours = ({ tour, deleteTour }) => {
   return (
     <section>
       {tour.map((tour) => {
-        return <Tour key={tour.id} {...tour} />;
+        return <Tour key={tour.id} {...tour} deleteTour={deleteTour} />;
       })}
     </section>
   );

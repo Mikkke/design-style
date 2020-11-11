@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Tours from "./components/Tours";
 import "./sass/style.scss";
 import axios from "axios";
+import Loading from "./components/Loading";
 
 const url = "https://course-api.com/react-tours-project";
 
@@ -26,10 +27,14 @@ function App() {
     fetchTour();
   }, []);
 
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <main className="App">
       <h1>Nos Sejours</h1>
-      <Tours />
+      <Tours tour={tour} />
     </main>
   );
 }

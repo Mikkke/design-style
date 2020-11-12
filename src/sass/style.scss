@@ -5,3 +5,28 @@ body {
   color: black;
   text-align: center;
 }
+
+main {
+  height: 100vh;
+}
+
+section {
+  display: flex;
+  border: 1px solid green;
+  height: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  article {
+    border: 1px solid red;
+    width: 20rem;
+    height: auto;
+    font-size: 0.8rem;
+    padding: 2rem;
+    margin: 2rem;
+    img {
+      width: 10rem;
+      height: 10rem;
+      object-fit: cover;
+    }
+  }
+}

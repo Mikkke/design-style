@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { MdExpandMore, MdExpandLess } from "react-icons/md";
+import { TiDeleteOutline } from "react-icons/ti";
 
 const Tour = ({ id, name, image, info, price, deleteTour }) => {
   const [readMore, setReadMore] = useState(false);
@@ -6,14 +8,16 @@ const Tour = ({ id, name, image, info, price, deleteTour }) => {
     <article>
       <img src={image} alt={name} />
       <h4>{name}</h4>
-      <h4>{price}</h4>
+      <h4>{price}€</h4>
       <p>
-        {readMore ? info : `${info.substring(0, 200)}...`}
+        {readMore ? info : `${info.substring(0, 100)}...`}
         <button onClick={() => setReadMore(!readMore)}>
-          {readMore ? `reduire` : `en savoir plus`}
+          {readMore ? <MdExpandLess /> : <MdExpandMore />}
         </button>
       </p>
-      <button onClick={() => deleteTour(id)}>supprimez sejour</button>
+      <div onClick={() => deleteTour(id)}>
+        <TiDeleteOutline />
+      </div>
     </article>
   );
 };

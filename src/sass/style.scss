@@ -15,12 +15,8 @@ section {
   height: auto;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: flex-start;
   article {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    flex-wrap: wrap;
     width: 20rem;
     height: auto;
     font-size: 0.8rem;
@@ -29,10 +25,14 @@ section {
     -webkit-box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
     box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
+
     img {
       width: 10rem;
       height: 10rem;
       object-fit: cover;
+    }
+    &:active {
+      transition: all 300ms;
     }
   }
 }

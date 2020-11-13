@@ -1,7 +1,7 @@
 /* @import "./reset.scss"; */
 body {
   background-color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: black;
   text-align: center;
 }
@@ -12,17 +12,23 @@ main {
 
 section {
   display: flex;
-  border: 1px solid green;
   height: auto;
   flex-wrap: wrap;
   justify-content: space-around;
   article {
-    border: 1px solid red;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    flex-wrap: wrap;
     width: 20rem;
     height: auto;
     font-size: 0.8rem;
-    padding: 2rem;
-    margin: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+    -webkit-box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 0px 39px -9px rgba(0, 0, 0, 0.75);
     img {
       width: 10rem;
       height: 10rem;
